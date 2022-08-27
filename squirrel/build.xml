@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="neutrino" default="build">
+    <property file="build.properties"/>
+    <property name="lib" value="../ant"/>
+    <property name="include" value="./include"/>
+    <property name="sqstdlib" value="./sqstdlib"/>
+    <property name="squirrel" value="./squirrel"/>
+    <property name="release" value="./release"/>
+    <property name="output" value="squirrel"/>
+    
+    <!-- Build classpath -->
+    <path id="classpath">
+        <fileset dir="${lib}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+    
+    <taskdef resource="cpptasks.tasks">
+        <classpath refid = "classpath"/>
+    </taskdef>
+    
+    <taskdef resource="cpptasks.types">
+        <classpath refid = "classpath"/>
+    </taskdef>
+    
+    <taskdef resource="builder.tasks">
+        <classpath refid = "classpath"/>
+    </taskdef>
+    
+    <echo>
+        ////////////////////////////////////////////////////////////////////////////////
+        //                                                                            //
+        //        ______    ______  __   __   __    ____    __  _____    _____        //
+        //       / ____ \  / ____/ / /  / / _/ /   / __ \  / / / ___ \  / ___ \       //
+        //      / /   / / / /__   / /  / / /  _/  / /  \/ / / / /  / / / /  / /       //
+        //     / /   / / / ___/  / /  / /  / /   / /     / / / /  / / / /  / /        //
+        //    / /   / / / /___  / /__/ /  / /_  / /     / / / /  / / / /__/ /         //
+        //   /_/   /_/  \____/  \_____/   \__/ /_/     /_/ /_/  /_/  \_____/          //
+        //                                                                            //
+        //                                                                            //
+        // This source file is a part of Neutrino Project. All rights reserved.       //
+        //                                                                            //
+        // Author: AlexeyBaldin@gmail.com                                             //
+        //                                                                            //
+        ////////////////////////////////////////////////////////////////////////////////
+    </echo>
+
+    <target name="build" depends="">
+    </target>
+	
+	<target name="linux">
+        <echo>
+            ////////////////////////////////////////////////////////////////////////////////
+            // Building Linux ${output}
+            ////////////////////////////////////////////////////////////////////////////////
+        </echo>
+        <mkdir dir="${release}/linux/obj"/>
+        <compile 
+            compiler="gcc" 
+            verbose="true"
+            outtype="static"
+            outfile="${release}/linux/lib${output}.so"
+            objdir="${release}/linux/obj">
+            
+			<!-- Defines system includes -->
+            <includepath path="${include}"/> 
+            <includepath path="${sqstdlib}"/> 
+            <includepath path="${squirrel}"/> 
+			
+			<compilerarg value="-fPIC"/>
+            <compilerarg value="-m32"/>
+
+            <linkerarg value="-m32"/>
+            
+            <!-- Defines linker args ${release}/mingw32/-->
+            <fileset dir="${sqstdlib}" includes="**/*.cpp" />
+            <fileset dir="${squirrel}" includes="**/*.cpp" />			
+        </compile>  
+        <delete dir="${release}/linux/obj"/>
+        <delete file="${release}/linux/history.xml"/> 
+    </target>
+
+    <target name="macos64">
+        <echo>
+            ////////////////////////////////////////////////////////////////////////////////
+            // Building MacOS ${output}
+            ////////////////////////////////////////////////////////////////////////////////
+        </echo>
+        <mkdir dir="${release}/macos64/obj"/>
+        <compile 
+            compiler="gcc" 
+            verbose="true"
+            outtype="static"
+            outfile="${release}/macos64/lib${output}.so"
+            objdir="${release}/macos64/obj">
+            
+            <!-- Defines system includes -->
+            <includepath path="${include}"/> 
+            <includepath path="${sqstdlib}"/> 
+            <includepath path="${squirrel}"/> 
+			
+            
+            <compilerarg value="-fPIC"/>
+            <compilerarg value="-g"/>
+            
+            <fileset dir="${sqstdlib}" includes="**/*.cpp" />
+            <fileset dir="${squirrel}" includes="**/*.cpp" />			
+        </compile>  
+        <delete dir="${release}/macos64/obj"/>
+        <delete file="${release}/macos64/history.xml"/> 
+    </target>
+    
+    <target name="mingw32">
+        <echo>
+            ////////////////////////////////////////////////////////////////////////////////
+            // Building MinGW 32 ${output}
+            ////////////////////////////////////////////////////////////////////////////////
+        </echo>
+        <mkdir dir="${release}/mingw32/obj"/>
+        <cc 
+            path="${MINGW32_TOOLCHAIN_PATH}"
+            outtype="static" 
+            subsystem="other"
+            outfile="${release}/mingw32/${output}"
+            objdir="${release}/mingw32/obj"
+            name="gcc-cross"
+            verbose="false"
+            rebuild="true">
+
+            <compilerarg value="-mwindows"/>
+            
+            <!-- Defines system includes -->
+            <includepath path="${include}"/> 
+            <includepath path="${sqstdlib}"/> 
+            <includepath path="${squirrel}"/> 
+            
+            <!-- Defines linker args ${release}/mingw32/-->
+            <fileset dir="${sqstdlib}" includes="**/*.cpp" />
+            <fileset dir="${squirrel}" includes="**/*.cpp" />
+        </cc>
+        <delete dir="${release}/mingw32/obj"/>
+        <delete file="${release}/mingw32/history.xml"/>
+    </target>
+	
+</project>    

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="squirrel" projectFiles="true" kind="ROOT">
+      <logicalFolder name="sqstdlib" displayName="sqstdlib" projectFiles="true">
+        <itemPath>squirrel/sqstdlib/sqstdaux.cpp</itemPath>
+        <itemPath>squirrel/sqstdlib/sqstdblob.cpp</itemPath>
+        <itemPath>squirrel/sqstdlib/sqstdio.cpp</itemPath>
+        <itemPath>squirrel/sqstdlib/sqstdmath.cpp</itemPath>
+        <itemPath>squirrel/sqstdlib/sqstdrex.cpp</itemPath>
+        <itemPath>squirrel/sqstdlib/sqstdstream.cpp</itemPath>
+        <itemPath>squirrel/sqstdlib/sqstdstring.cpp</itemPath>
+        <itemPath>squirrel/sqstdlib/sqstdsystem.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="squirrel" displayName="squirrel" projectFiles="true">
+        <itemPath>squirrel/squirrel/sqapi.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqbaselib.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqclass.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqclosure.h</itemPath>
+        <itemPath>squirrel/squirrel/sqcompiler.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqdebug.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqfuncstate.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqlexer.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqmem.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqobject.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqstate.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqtable.cpp</itemPath>
+        <itemPath>squirrel/squirrel/sqvm.cpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Исходные файлы"
+                   projectFiles="true">
+      <itemPath>src/main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Файлы заголовков"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Файлы ресурсов"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Файлы тестов"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Важные файлы"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>squirrel/sqstdlib</Elem>
+    <Elem>squirrel/squirrel</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>squirrel/include</pElem>
+            <pElem>squirrel/sqstdlib</pElem>
+            <pElem>squirrel/squirrel</pElem>
+          </incDir>
+        </ccTool>
+      </compileType>
+      <item path="squirrel/sqstdlib/sqstdaux.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdblob.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdmath.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdrex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdstream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdstring.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdsystem.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqapi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqbaselib.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqclass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqclosure.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqcompiler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqdebug.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqfuncstate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqlexer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqmem.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqobject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqstate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqtable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqvm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="squirrel/sqstdlib/sqstdaux.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdblob.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdio.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdmath.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdrex.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdstream.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdstring.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/sqstdlib/sqstdsystem.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqapi.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqbaselib.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqclass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqclosure.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqcompiler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqdebug.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqfuncstate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqlexer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqmem.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqobject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqstate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqtable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="squirrel/squirrel/sqvm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
